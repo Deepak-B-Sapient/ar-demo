@@ -9,10 +9,17 @@
         <a-scene embedded="" arjs="trackingMethod: best;" class="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
                 <a-image id="test" src="lbp_nav_logo.jpeg" position="0 0 0" rotation="-90 0 0" width="" height="" opacity="1" transparent="true" alpha-test="0.2" shader="standard" scale="1 1 1" visible="" material="" geometry=""></a-image>
 
-            <!-- <a-marker-camera preset='hiro'></a-marker-camera> -->
-            <a-marker type="pattern" url="pattern-lbp.patt">
-                <a-entity myobject></a-entity>
-          </a-marker>
+            <a-marker-camera preset='hiro'></a-marker-camera>
         </a-scene>
+
+        <script>
+            AFRAME.registerComponent('clickhandler', {
+                init: function() {
+                    this.el.addEventListener('click', () => {
+                        location.href = "https://www.lovebeautyandplanet.com/us/en";
+                    });
+            }});
+        </script>
     </body>
 </html>
+
