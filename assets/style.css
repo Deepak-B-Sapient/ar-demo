@@ -108,6 +108,13 @@ body {
 }
 .video {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 1s ease-in-out;
 }
 
 .video video{
@@ -117,14 +124,16 @@ body {
 
 .video.active {
     display: block;
+    opacity: 1;
+
 }
 
 @keyframes zoom {
     0% { transform: scale(0.25, 0.25); }
-   100%   { transform: scale(1.3, 1.3); opacity: 0; }
+   100%   { transform: scale(1.3, 1.3);}
 }
 
 @-webkit-keyframes  zoom {
     0% { transform: scale(0.25, 0.25); }
-    100%   { transform: scale(1.3, 1.3); opacity: 0; }
+    100%   { transform: scale(1.3, 1.3); }
 }
