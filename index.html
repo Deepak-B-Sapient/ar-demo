@@ -27,7 +27,9 @@
                 product.classList.remove("active");
                 logo.classList.remove("active");
                 videoBox.classList.add("active");
+                alert(1);
                 video.play();
+
             })
           });
         },
@@ -37,6 +39,16 @@
   </head>
 
   <body style="margin: 0px; overflow: hidden">
+    <div>
+      <a-scene embedded arjs>
+        <a-marker
+            markerhandler
+            preset="hiro"
+        >
+        </a-marker>
+        <a-entity camera></a-entity>
+      </a-scene>
+    </div>
     <div class="startPanel">
       <img src="assets/product_shot.png" alt="" />
       <h1>Follow our carbon footprint</h1>
@@ -65,16 +77,7 @@
             webkit-playsinline
         ></video>
     </div>
-    <div>
-      <a-scene embedded arjs>
-        <a-marker
-            markerhandler
-            preset="hiro"
-        >
-        </a-marker>
-        <a-entity camera></a-entity>
-      </a-scene>
-    </div>
+
 
     <script src="./assets/script.js"></script>
   </body>
