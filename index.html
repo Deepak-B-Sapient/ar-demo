@@ -25,6 +25,7 @@
             logo.classList.add("active");
             product.addEventListener("animationend", function(e){
                 product.classList.remove("active");
+                logo.classList.remove("active");
                 videoBox.classList.add("active");
                 video.play();
             })
@@ -68,9 +69,7 @@
       <a-scene embedded arjs>
         <a-marker
             markerhandler
-            preset="custom"
-            type="pattern"
-            url="https://deepak-b-sapient.github.io/ar-demo/assets/pattern.patt"
+            preset="hiro"
         >
         </a-marker>
         <a-entity camera></a-entity>
